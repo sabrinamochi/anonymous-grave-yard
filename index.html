@@ -6,11 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Project starter</title>
-    <link rel="stylesheet" type="text/css" href="dist/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/style.css" />
+    <script src="./src/lib/d3.js"></script>
 </head>
 
 <body>
-    <h1>Hello world!</h1>
+	<header class="index-page-header">
+		<h1>Title</h1>
+		<nav></nav>
+	</header>
+
+    <main class="index-page-container">
+    	<section class="index-page-section" id="main-story" onclick="myhref('main.html')">
+    		<p>main story</p>
+    	</section>
+    	<section class="index-page-section profiles-container">
+    		<div class="profile">Profile One</div>
+    		<div class="profile">Profile Two</div>
+    	</section>
+    	<section class="index-page-section photo-gallery">Photo Gallery</section>
+    </main>
+
+
+    <script type="text/javascript">
+    	function myhref(url){
+      		window.location.href = url;
+      	}
+	</script>
+
 </body>
 
 </html>

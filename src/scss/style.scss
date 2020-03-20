@@ -1,0 +1,80 @@
+
+*{
+    margin:0;
+    padding:0;
+    border: solid 2px gray;
+}
+
+body {
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.index-page-header {
+    height: 50vh;
+}
+
+.index-page-container {
+    display: grid;
+    height: 80vh;
+    grid-template-rows: 2fr 1fr 1fr;
+}
+
+.profiles-container {
+    display: flex;
+    justify-content: stretch;
+}
+
+.profile {
+    width: 50%;
+}
+
+/* grave map */
+$p-color: #999999;
+$c-color: #998675;
+$shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+$tooltip-background: rgba(255, 255, 255, 0.8);
+$black-font: rgb(20, 20, 20);
+
+#chart {
+    width: 100vw;
+    height: 70vh;
+}
+
+.rects {
+    cursor: pointer;
+}
+
+.rectsLabels {
+    font-size: .85em;
+    fill: rgba(255,255,255,0.9);
+
+}
+
+.tooltip {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    visibility: hidden;
+    font-size: 18px;
+    background-color: $tooltip-background;
+    border-radius: 20px;
+    box-shadow: $shadow;
+    padding: .5em 1em;
+    line-height: 1.5em;
+    pointer-events: none;
+    max-width: 25%;
+    color: $black-font;
+}
+
+
+@media only screen and (max-device-width: 500px) {
+    
+
+
+/* grave map */   
+.rectsLabels {
+    font-size: 0;
+
+    }
+}
