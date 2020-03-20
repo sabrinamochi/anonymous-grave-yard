@@ -1,0 +1,27 @@
+{
+  "name": "anonymous-grave-yard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --output-style compressed -o dist/css src/scss",
+    "server": "browser-sync start --server --files 'dist/css/*.css, **/*.html'",
+    "watch:css": "onchange 'src/scss' -- npm run scss",
+    "start": "run-p server watch:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabrinamochi/anonymous-grave-yard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sabrinamochi/anonymous-grave-yard/issues"
+  },
+  "homepage": "https://github.com/sabrinamochi/anonymous-grave-yard#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "node-sass": "^4.13.1"
+  }
+}
