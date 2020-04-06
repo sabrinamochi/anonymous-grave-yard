@@ -38,7 +38,7 @@ C-36,Elizabeth Grant,1918,8/14/1954,27,11,C
 C-37,Gabriel Peterson,1895,11/12/1954,27,12,C
 C-38,Annie M. Harrington ,abt. 1871,2/2/1955,27,13,C
 C-39,Stanley Cerewicz,1/21/1906,2/13/1955,27,14,C
-C-40,"William ""Dupree"" Després",1882,6/11/1955,,,C
+C-40,"William ""Dupree"" Després",1882,6/11/1955,27,15,C
 C-41,William Horan,1880,3/12/1955,24,2,C
 C-42,John Dagostino,4/20/1908,4/15/1955,24,3,C
 C-43,Henry Leahy,abt. 1889,6/29/1955,24,4,C
@@ -52,7 +52,7 @@ C-50,John McVey,?,5/22/1956,24,11,C
 C-51,John Ure,?,5/28/1956,24,12,C
 C-52,Esther Connors,3/25/1904,8/30/1956,24,13,C
 C-53,Elizabeth Doherty,abt. 1920,11/20/1956,24,14,C
-C-54,Joseph O'Connor,?,?,,,C
+C-54,Joseph O'Connor,?,?,24,15,C
 C-55,Margaret Elmer,abt. 1889,2/21/1957,23,2,C
 C-56,Mary Quinn,?,?,23,3,C
 C-57,Lucian Goyette,abt. 1895,10/2/1957,23,4,C
@@ -68,6 +68,7 @@ C-66,Robert Francis Dodamn,2/23/1947,3/1/1959,23,13,C
 C-67,Thomas Quinn,11/2/1903,3/3/1959,23,14,C
 C-68,Dorothy Penney,7/9/1915,3/24/1959,23,15,C
 C-69,Robert Comeau,5/30/1943,7/19/1959,23,16,C
+V,John Vensky,7/18/1936,10/25/1972,23,17,C
 C-70,Sebastian D'Agostino,abt. 1917,1959,22,2,C
 C-71,Annie Ellis,?,1/9/1960,22,3,C
 C-72,Charles Henry,1/30/1891,6/29/1960,22,4,C
@@ -110,10 +111,9 @@ C-108,Anna Reddington ,12/10/1921,7/10/1965,20,12,C
 C-109,Peter Altieri,?,?,20,13,C
 C-110,John Smarz,abt. 1889,?,20,14,C
 C-111,Sephan Krivicic,?,?,20,15,C
-C-112,"Veronica Mary ""Mary Veronica"" Welch",12/3/1918,5/16/1966,20,16,C
-C-113,John Galven,abt. 1887,?,,,C
-C-114,Harry Charles Gabour,9/1/1943,7/20/1966,,,C
-C-115,,,,19,5,C
+C-113,John Galven,abt. 1887,?,20,17,C
+C-114,Harry Charles Gabour,9/1/1943,7/20/1966,20,18,C
+W,"Veronica Mary ""Mary Veronica"" Welch",12/3/1918,5/16/1966,20,16,C
 C-116,Vincent Strudas,7/3/1942,8/12/1966,19,6,C
 C-117,Vital Pastarache,?,?,19,7,C
 C-118,Mary Connors,?,?,19,8,C
@@ -121,34 +121,31 @@ C-119,Bernice Pullano,11/23/1911,5/27/1967,19,9,C
 C-121,Margaret M. Burgess,1/21/1895,7/23/1967,19,11,C
 C-122,Alban Joseph Lavallie,7/29/1912,11/26/1967,19,12,C
 C-125,Adeline Ward,?,?,19,14,C
-C-126,Rose Lisiewski,abt. 1905,5/7/1968,,,C
-C-127,Victor D'Amore,abt. 1909,?,,,C
-C-129,Edward A. Farrell,11/1/1899,1/2/1969,,,C
-C-130,George M. Barros,12/24/1960,1/1/1969,,,C
-C-131, Mary Sasso,3/17/1954,6/23/1969,,,C
-C-133,Joseph Andrew Dorval,8/24/1923,8/28/1969,,,C
-C-134,Catherine Conlon,abt. 1902,?,,,C
-C-136,Claude Moran,3/17/1905,10/22/1970,,,C
-C-137,Lisa Flannery,3/31/1968,12/13/1970,,,C
-C-138,Robert Conron,1/3/1908,11/16/1971,18,4,C
-C-140,Frank R. Varga,11/22/1959,2/26/1971,18,3,C
-C-142,Annie Anciello,abt. 1903,6/4/1972,,,C
-C-143,John Grasso,?,?,18,7,C
-C-144,,,,18,10,C
-C-145,Joseph Murphy,?,?,18,8,C
-C-146,John Vensky,7/18/1936,10/25/1972,,,C
-C-147,Mildred Rice,?,?,,,C
-C-149,,,,18,14,C
-C-152,Celia Quarantiello,12/31/1952,1/20/1973,,,C
-C-153,John O'Callaghan,1/9/1933,1/12/1973,17,3,C
-C-154,John Scott,1956,4/16/1973,17,4,C
-C-155,Stephen C. Kenney,4/26/1955,5/15/1977,17,5,C
-C-156,Gertrude Perry,10/23/1899,4/25/1973,17,6,C
-C-157,Richard Herman,12/11/1949,8/2/1973,17,7,C
-C-158,Alice Field,4/16/1906,10/25/1974,17,8,C
-C-159,Philomenia Frangione,10/28/1913,10/5/1973,17,9,C
-C-160,Geraldine Estell,8/29/1910,12/18/1975,17,10,C
-C-161,Charles Haskell,?,?,17,11,C
+C-126,Rose Lisiewski,abt. 1905,5/7/1968,18,5,C
+C-127,Victor D'Amore,abt. 1909,?,18,6,C
+C-129,Edward A. Farrell,11/1/1899,1/2/1969,18,7,C
+C-130,George M. Barros,12/24/1960,1/1/1969,18,8,C
+C-131, Mary Sasso,3/17/1954,6/23/1969,18,9,C
+C-133,Joseph Andrew Dorval,8/24/1923,8/28/1969,18,10,C
+C-134,Catherine Conlon,abt. 1902,?,18,11,C
+C-136,Claude Moran,3/17/1905,10/22/1970,18,12,C
+F,Lisa Flannery,3/31/1968,12/13/1970,18,13,C
+C-138,Robert Conron,1/3/1908,11/16/1971,17,5,C
+C-140,Frank R. Varga,11/22/1959,2/26/1971,17,4,C
+C-142,Annie Anciello,abt. 1903,6/4/1972,17,7,C
+C-143,John Grasso,?,?,17,8,C
+C-145,Joseph Murphy,?,?,17,9,C
+C-147,Mildred Rice,?,?,17,11,C
+Q,Celia Quarantiello,12/31/1952,1/20/1973,16,2,C
+C-153,John O'Callaghan,1/9/1933,1/12/1973,16,3,C
+C-154,John Scott,1956,4/16/1973,16,4,C
+C-155,Stephen C. Kenney,4/26/1955,5/15/1977,16,5,C
+C-156,Gertrude Perry,10/23/1899,4/25/1973,16,6,C
+C-157,Richard Herman,12/11/1949,8/2/1973,16,7,C
+C-158,Alice Field,4/16/1906,10/25/1974,16,8,C
+C-159,Philomenia Frangione,10/28/1913,10/5/1973,16,9,C
+C-160,Geraldine Estell,8/29/1910,12/18/1975,16,10,C
+C-161,Charles Haskell,?,?,16,11,C
 P-1,Lillian Edick,5/6/1864,12/17/1947,1,8,P
 P-2,Irving Janson,abt. 1893,4/30/1905,1,9,P
 P-3,Herman J. Motter,abt. 1910,11/5/1947,1,10,P
@@ -156,7 +153,7 @@ P-4,Lilian MacDonald,abt. 1916,1947,1,11,P
 P-5,Daniel Washburn,9/20/1881,4/17/1948,1,12,P
 P-6,Alvin Fawler,4/18/1905,5/5/1948,1,13,P
 P-7,Charles Skinner,1881,5/1/1905,1,14,P
-P-8,Helena Ries (Helen Rice),4/26/1876,8/14/1948,,,P
+P-8,Helena Ries (Helen Rice),4/26/1876,8/14/1948,1,15,P
 P-9,Lawrence Atkins,2/3/1911,1/17/1948,2,8,P
 P-10,Lottie B Wyman,2/19/1905,1/23/1949,2,9,P
 P-11,Leilina Burrill,7/10/1878,2/13/1949,2,10,P
@@ -223,10 +220,10 @@ P-71,George Theodores,12/10/1879,12/29/1958,7,14,P
 P-72,Ella May MacFarland,abt. 1882,5/11/1905,7,15,P
 P-73,Harry Harmon,6/5/1892,11/11/1958,7,16,P
 P-74,"Dillie May ""Minnie"" Phair",8/4/1875,1/26/1959,7,1,P
-P-75,Mary Willis,?,1959,7,2,P
+P-75,Mary Willis,?,?,7,2,P
 P-76,"Emelie  ""Emily"" B. Hill",abt. 1869,9/10/1959,7,3,P
 P-77,Halford Wetherell,4/4/1872,9/16/1959,7,4,P
-P-78,Lila Bates Foote,4/29/1889,2/21/1960,,,P
+P-78,Lila Bates Foote,4/29/1889,2/21/1960,8,9,P
 P-79,Esther M. Davis,5/10/1906,12/11/1961,8,10,P
 P-80,Carlos Lombard,1/2/1902,3/23/1960,8,11,P
 P-81,"Bertrand ""Bertam"" Melville Lewis ",11/13/1890,10/27/1960,8,12,P
@@ -235,7 +232,6 @@ P-83,Richard Foster Engle,12/1/1915,4/25/1960,8,14,P
 P-84,Frank E. Brooks,1878,3/27/1960,9,3,P
 P-85,Hans Rehwinkle,abt. 1888,5/13/1905,9,4,P
 P-86,Henry McDonald Webster,7/11/1888,6/30/1961,9,7,P
-P-87,,,,9,8,P
 P-88,Frederick Alfred Walters,4/6/1884,7/10/1961,9,9,P
 P-89,Thea Hansen,6/11/1945,12/23/1960,9,10,P
 P-90,Annie Carlin,abt. 1872,2/3/1961,9,11,P
@@ -249,7 +245,6 @@ P-97,Harry Gilmore,11/1/1880,11/25/1961,10,3,P
 P-98,Ester Davis,est. 1908,?,10,4,P
 P-99,Lillian M. Rogers,?,?,10,5,P
 P-100,Dikran Bedros Mardigian,10/16/1887,4/10/1962,10,6,P
-P-101,,,,10,7,P
 P-102,Grover Nickerson,1/22/1885,4/27/1962,10,8,P
 P-105,Walter Mattson,?,?,10,9,P
 P-106,Edward Tyner,3/6/1905,?,10,10,P
@@ -264,14 +259,14 @@ P-114,Henry L. Kitfield,?,?,11,1,P
 P-115,Ida Childs,abt. 1877,?,11,2,P
 P-116,Ruth McNamara,1898,1/7/1964,11,3,P
 P-117,Sigrid Malmquist,4/17/1892,10/13/1964,11,4,P
-P-118,Aubrey Keith,2/24/1896,1/3/1965,11,11,P
-P-119,Grace Sawyer,abt. 1883,11/5/1964,11,12,P
-P-120,Henry Lake,abt. 1891,5/17/1905,11,13,P
-P-121,Ralph Spafford,2/4/1895,4/10/1964,11,14,P
-P-122,Henry Wilson,11/13/1913,3/19/1964,11,15,P
-P-123,George Webber,3/29/1901,12/6/1963,11,16,P
-P-124,Sally Kenoian ,9/28/1959,10/2/1962,11,17,P
-P-125,Earl Sabens,5/21/1884,10/19/1964,,,P
+P-118,Aubrey Keith,2/24/1896,1/3/1965,11,10,P
+P-119,Grace Sawyer,abt. 1883,11/5/1964,11,11,P
+P-120,Henry Lake,abt. 1891,5/17/1905,11,12,P
+P-121,Ralph Spafford,2/4/1895,4/10/1964,11,13,P
+P-122,Henry Wilson,11/13/1913,3/19/1964,11,14,P
+P-123,George Webber,3/29/1901,12/6/1963,11,15,P
+P-124,Sally Kenoian ,9/28/1959,10/2/1962,11,16,P
+P-125,Earl Sabens,5/21/1884,10/19/1964,11,17,P
 P-133,Nannie Johnson,6/2/1891,2/6/1967,12,5,P
 P-134,Ralph Deming,?,?,12,6,P
 P-135,Mildred Edna Young ,7/5/1902,12/08/1966,12,7,P
@@ -299,15 +294,3 @@ P-185,Evelyn May Dennis,1903,11/13/1973,15,5,P
 P-186,Caroline E. Drew,12/31/1907,1972,15,6,P
 P-187,Donald Boyington,4/5/1905,11/9/1972,15,7,P
 P-189,Lucy Cluster,1958,11/30/1974,15,11,P
-P-151,,,,13,10,P
-P-152,,,,13,11,P
-P-153,,,,13,12,P
-P-154,,,,13,13,P
-P-155,,,,13,14,P
-P-156,,,,13,15,P
-P-157,,,,13,16,P
-P-190,,,,16,1,P
-P-191,,,,16,2,P
-P-192,,,,16,3,P
-P-196,,,,16,7,P
-P-201,,,,16,11,P

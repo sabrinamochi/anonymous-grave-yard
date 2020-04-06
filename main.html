@@ -7,13 +7,83 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Project starter</title>
     <link rel="stylesheet" type="text/css" href="dist/css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Alegreya:400,400i,700|Lato:300,300i,400,700&display=swap" rel="stylesheet">
     <script src="./src/lib/d3.js"></script>
+    <script src="./src/lib/jquery-3.4.1.min.js"></script>
+    <script src="./src/lib/jquery.waypoints.min.js"></script>
+    
 </head>
 
 <body>
+      <nav>
+            <ul class="navigator">
+                <li><a href="#home">home</a></li>
+                <li><a href="#story">story</a></li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">profiles</a>
+                    <div class="dropdown-content">
+                        <a href="#profile1">Profile1</a>
+                        <a href="#profile2">Profile2</a>
+                    </div>
+                </li>
+                <li><a href="#about">about</a></li>    
+            </ul>
+      </nav>
+      <header>
+          
+          <div class="cover-pic" id="main-story-cover-pic">
+            <div class="header-text-container">
+              <h1>Title: Official Final Story</h1>
+              <p class="subhead">subhead: a story that’s never been told before</p>
+            </div>
+          </div>
+          <div class="byline-container">
+              <p class="byline">Byline</p>
+          </div>
+      </header>
+
       <main class="main-story-container">
+        <section>
+            <p class="content">
+                John Scott loved going to school. He spent Mondays through Fridays learning how to read, count money and tell time. But it was the creative subjects –– art and music –– that he enjoyed most. John didn’t attend a regular school. In fact, the school he attended didn’t even consider him to be a real student. He was an “inmate,” a “patient” of the Walter E. Fernald Developmental Center, the oldest state-run institution in the United States for people with intellectual and developmental disabilities. </br></br>
+
+                John spent his days, and most of his life, in a wheelchair in the institution located in Waltham. He was born with spina bifida, a birth defect that leads to an incomplete closing of the spine and spinal cord. He was paralyzed from the waist down, his legs were atrophied and he had a barrel chest. Born in 1956 in Boston to Eleanor Scott and James Warren Scott, John spent his entire life in the Fernald School. His parents dropped him off at the institution when he was a baby and never came back. </br></br>
+
+                “As far as I know, he had no family involved in his life from the time he was put there. That’s what they did at the time, they basically [put their children] away,” recalls Susan Weiner, 72, John’s teacher between 1970 and 1973, the last years of his life. Nearly 50 years later, Weiner, who retired from teaching in 1973, remembers her favorite student with fondness, his black-rimmed glasses, his black hair and stubble, his love of good conversation and learning. “He was very sweet… he really loved coming to school every day.”</br></br>
+
+                Outside of classes however, John’s experience at the Fernald School wasn’t so positive. He was mostly neglected by nurses and staff who rarely accommodated his paralysis and kept him clean. Due to his disability, a colostomy bag was attached to an opening in his abdomen to collect his waste, but it was seldomly cleaned and changed.</br></br>
+
+                “He needed nursing care, and I truly don’t believe that he got all the care that he needed,” says Weiner from her home in Belmont. “He was never kept clean...he smelled, the bag would smell.”</br></br>
+
+                John died at the age of 17 on April 16, 1973, due to congestive heart failure, a condition in which the heart is unable to pump sufficient blood. As was the case for many patients at the Fernald School, the neglect he experienced in life carried over in death.</br></br>
+            </p>
+        </section>
+        <section class="two-col">
+            <div class="chart-container-left" id="grave-demo"></div>
+            <div class="content paragraphc-container-right">
+            <p class="right-col-text" id="demoMap1">
+                Between 1947 and 1979, the Fernald School and the Metropolitan State Hospital, an adjacent mental asylum, were responsible for burying 298 of their patients, including John, in unnamed graves on a plot of former marshland now called the MetFern Cemetery. The grave markers in the cemetery –– which is located a short walk away, through a winding path in the woods, from both institutions –– are sunken and toppled and have only two things etched onto their concrete slabs: “C” or “P” for Catholic and Protestant, and a number that denotes the order in which the patient was buried. </br></br>
+            </p>
+            <p class="right-col-text" id="demoMap2">
+                There are only four patients who were given proper headstones in this space. In these rare cases, family members paid for their loved ones’ full names and birth and death dates to be engraved on a higher-quality stone. However most of these institutions’ patients were either abandoned by their families, were orphans or could not afford a proper burial. </br></br>
+            </p>
+            <p class="right-col-text" id="demoMap3">
+                John is buried under stone C-154. His funeral was a somber affair, attended only by a priest and few staff members, including Weiner. His family was not in attendance. Weiner remembers feeling a profound sense of sadness at seeing John being lowered into his simple grave. “It just seemed kind of barren. There was just something really sad about it, that there wasn’t family... He went into a pauper’s grave.”</br></br>
+
+                This was the reality for hundreds of thousands of others in state-run institutions in Massachusetts. “Most of the state institutional cemeteries in Massachusetts, and really around the country, just have numbers for the folks that are buried in institutional cemeteries,” says Ashlynn Rickord, a historian who has researched Fernald and MetFern and who is currently the cemetery director for Providence, Rhode Island. “MetFern is one of so many that needs to bring names to patients... the state [needs to] take responsibility for these cemeteries.”
+            </p>
+        </div>
+        </section>
+        <section>
+            <p class="content">
+                There were at least 16 state hospitals and three state schools in Massachusetts that buried their patients under unnamed graves. A “state hospital” was typically for the mentally ill, and its purpose was to “cure patients” suffering from varying degrees of mental illness and  even diseases such as alcoholism. A “state school” was meant for the disabled, or the “feeble-minded” as they were originally called; they later became known as developmental centers. Their primary purpose was to educate intellectually and developmentally disabled children to be independent. Over time however, conditions deteriorated and these schools transitioned into custodial institutions. </br></br>
+
+                MetFern, a word used to show the combination of MetState and Fernald, is only a small case in a catalogue of larger institutions that adopted similar burial practices. Foxborough State Hospital, Danvers State Hospital and Medfield State Hospital, all named after the towns they’re located in, are a few examples. On average, most institutions buried between 1,000 to 2,000 patients on plots of land out in the woods and in overgrown fields. However, there are some institutions in Massachusetts that far outnumber these figures. </br></br>
+
+                Tewksbury State Hospital, which was and continues to be one of the larger institutions in the state, is one such example. Spanning over 800 acres, the institution first served as an almshouse for the destitute and later transitioned into a custodial facility for the “criminally insane” and a hospital to treat infectious diseases such as syphilis and tuberculosis. Today Tewksbury operates as a hospital providing treatment and care for adults suffering from medical or mental illnesses. Rickord estimates that its cemetery could hold 10,000 to 30,000 patients who were similarly buried without names, birth and death dates – the traditional markings of cemetery gravestones.  Still, these numbers are rough estimations. There is no definitive way to know how many patients are buried in institutional cemeteries, say experts.</br></br>
+            </p>
+        </section>
         <div class="chart-container">
-            <div id="chart"></div>
+            <div id="grave-map"></div>
         </div>
     </main>
     <script src="./src/js/main-story-script.js"></script>
