@@ -4,6 +4,7 @@ $content-font:'Lato', sans-serif;
 $white: #f9f9f9;
 $black: #333;
 $shadow-black: 0 8px 16px 0 rgba(0,0,0,0.2);
+$left-right-margin: 13em;
  
 
 *{
@@ -16,6 +17,11 @@ body {
     font-family: $content-font;
     font-size: 18px;
     color: $black;
+}
+
+.section-with-iframe {
+    display: grid;
+    justify-items: center;
 }
 
 .index-page-header {
@@ -144,12 +150,19 @@ h1 {
 
 }
 
+h2 {
+    font-family: $title-font;
+    font-weight: 500;
+    font-size: 36px;
+    margin: 0 0 1em $left-right-margin/2;
+}
+
 section {
     margin: 3em 0;
 }
 
 .content {
-    margin: 0 13em;
+    margin: 0 $left-right-margin;
     line-height: 167%;
     letter-spacing: 0.02em;
 }
@@ -188,6 +201,73 @@ section {
 
 #graveDemoSvg {
     margin-top: 10em;
+}
+
+/* image slides */ 
+
+.image-slideshow-container {
+    margin: 3em 0;
+    position: relative;
+}
+
+.image-slides {
+    display: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.image-slides img {
+    width: 100%;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: $white;
+    fonr-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+  color: $white;
+  font-size: .8em;
+  padding: 1em 1.5em;
+  position: absolute;
+  top: 0;
+}
+
+.caption-container {
+  text-align: center;
+  font-style: italic;
+  font-weight: 300;
+  padding: 2px 16px;
+  color: $black;
+}
+
+/* iframe */
+
+iframe {
+    width: 80%;
+    margin: 3em 0;
 }
 
 /* grave map */

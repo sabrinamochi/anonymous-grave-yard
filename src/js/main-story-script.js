@@ -258,6 +258,30 @@ function drawGraveMap(data, boundsName) {
         }, {offset: "60%"})
 
 
+        $demoMap2.waypoint(function (direction) {
+
+
+            if (direction == "down") {
+                graveDemoSvg
+                .transition()
+                .ease(d3.easeLinear)
+                .duration(3000)
+                .attr('viewBox', [graveDemoWidth/2, 0, graveDemoWidth*1.5, graveDemoHeight*1.5]);
+            }
+
+            if (direction == "up") {
+                graveDemoSvg
+                .transition()
+                .ease(d3.easeLinear)
+                .duration(500)
+                .attr('viewBox', [0, 0, graveDemoWidth*1.5, graveDemoHeight*1.5]);
+            }
+
+
+
+        }, { offset: "70%" });
+
+
         $demoMap2.waypoint(function (direction){
 
             if (direction == "down"){
@@ -353,29 +377,6 @@ function drawGraveMap(data, boundsName) {
         }, {offset: "30%"})
    
 
-        $demoMap2.waypoint(function (direction) {
-
-
-            if (direction == "down") {
-                graveDemoSvg
-                .transition()
-                .ease(d3.easeLinear)
-                .duration(2000)
-                .attr('viewBox', [graveDemoWidth/2, 0, graveDemoWidth*1.5, graveDemoHeight*1.5]);
-            }
-
-            if (direction == "up") {
-                graveDemoSvg
-                .transition()
-                .ease(d3.easeLinear)
-                .duration(500)
-                .attr('viewBox', [0, 0, graveDemoWidth*1.5, graveDemoHeight*1.5]);
-            }
-
-
-
-        }, { offset: "90%" });
-
 
 function zoomIn(elementID) {
 // zooming in part
@@ -386,6 +387,31 @@ var currentElement= document.getElementById(elementID),
 
 }
 
+var slideIndex = 1;
+showSlides(slideIndex, "#tewksbury-image-container");
+showSlides(slideIndex, "#building-image-container");
+showSlides(slideIndex, "#fernandmet-image-container");
+
+
+function plusSlides(n){
+    showSlides(slideIndex +=n);
+}
+
+function showSlides(n, container){
+    var i;
+    $slides = $(container + " .image-slides");
+    $image = $(container + " .image-slides .image-img");
+    $captionText = $(container + " .caption");
+    if ( n > $slides.length){slideIndex = 1;}
+    if (n < 1) {slideIndex = $slides.length;}
+    for (i = 0; i < $slides.length; i++){
+        $slides[i].style.display = "none";
+    }
+
+    $slides[slideIndex-1].style.display = "block";
+    $captionText.innerHTML = $image[slideIndex-1].alt;
+
+}
 
 
 
