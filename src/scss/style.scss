@@ -1,51 +1,38 @@
 
-$title-font: 'Alegreya', serif;
-$content-font:'Lato', sans-serif;
+$title-font: 'PT Sans', sans-serif;
+$content-font:'PT Serif', serif;
+$narrow-font: 'PT Sans Narrow', sans-serif;
 $white: #f9f9f9;
 $black: #333;
 $shadow-black: 0 8px 16px 0 rgba(0,0,0,0.2);
-$left-right-margin: 13em;
+$content-width: 40em;
  
 
 *{
     margin:0;
     padding:0;
+    box-sizing: border-box;
 }
 
 body {
-    box-sizing: border-box;
     font-family: $content-font;
     font-size: 18px;
     color: $black;
 }
 
-.section-with-iframe {
+section {
     display: grid;
     justify-items: center;
+    margin: 3em 0;
 }
 
-.index-page-header {
-    height: 50vh;
+.chart-container {
+    margin: 3em 0;
 }
 
-.index-page-container {
-    display: grid;
-    height: 80vh;
-    grid-template-rows: 2fr 1fr 1fr;
-}
 
-.profiles-container {
-    display: flex;
-    justify-content: stretch;
-}
-
-.profile {
-    width: 50%;
-}
 
 /*story structure*/
-
-
 nav{
     position: -webkit-sticky; /* Safari */
     position: sticky;
@@ -54,9 +41,9 @@ nav{
 }
 
 .navigator {
+    font-family: $narrow-font;
     text-transform: uppercase;
     font-style: normal;
-    font-weight: 300;
     font-size: 18px;
     line-height: 30px;
     border-bottom: 0.3px solid $white;
@@ -72,13 +59,26 @@ li {
    float: left; 
 }
 
+a {
+    text-decoration: none;
+    color: $black;
+    border-bottom: $black solid 1px;
+    font-style: italic;
+    
+}
+
+i {
+    font-weight: 700;
+    font-style: initial
+}
+
 .navigator a, .dropbtn {
     display: inline-block;
     color: white;
     text-align:center;
     padding: .5em 1em;
     text-decoration: none;
-
+    font-style: initial;
 }
 
 .navigator a:hover, .dropbtn:hover {
@@ -117,54 +117,57 @@ li.dropdown{
     width: 100vw;
     background-color: #333;
     display: flex;
-    align-items: end;
-    display: flex;
+    flex-flow: row wrap;
     align-items: flex-end;
     justify-content: center;
+    background: linear-gradient(to bottom, rgba(51,51,51,0.2) 100px, rgba(51,51,51,0.95) 600px), url("../../src/assets/img/main-cover.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .header-text-container{
-    padding: 0 0 3em;
+    width: 100%;
 }
 
 h1 {
-    padding: 0 3em .3em;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 96px;
     text-align: center;
     font-family: $title-font;
     color: $white;
+    padding: 0 .3em;
 }
 
 .subhead{
+    font-style: italic;
+    margin: 0 0 2.5em;
     font-size: 28px;
     text-align: center;
     color: $white;
-    font-weight: 300;
 }
 
 .byline {
+    margin: 0em 0 2em;
     text-align:center;
-    margin: 2em 0 5em;
-    font-style: italic;
+    color: $white;
+    font-family:  $narrow-font;
 
 }
 
 h2 {
     font-family: $title-font;
-    font-weight: 500;
+    font-weight: regular;
     font-size: 36px;
-    margin: 0 0 1em $left-right-margin/2;
+    margin: 0 0 1em 0;
+    justify-self: start;
 }
 
-section {
-    margin: 3em 0;
-}
 
 .content {
-    margin: 0 $left-right-margin;
+    margin: 0 0;
     line-height: 167%;
     letter-spacing: 0.02em;
+    max-width: $content-width;
 }
 
 .two-col {
@@ -179,6 +182,7 @@ section {
 }
 
 .paragraphc-container-right {
+    width: fit-content;
     margin: 0 2.5em;
 }
 
@@ -189,6 +193,149 @@ section {
 .right-paragraph-full-opacity {
     opacity:1; 
 }
+
+footer {
+    width: 100%;
+    height: 15vh;
+    border-top: 0.5px solid $white; 
+    background-color: $white;
+}
+
+/*home*/
+
+#home {
+    background:rgba(51,51,51,1);
+}
+
+.index-page-section{
+    cursor: pointer;
+}
+ #to-main-story, .to-profile {
+    width: 80%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1.5px 1.5px 8px black;
+}
+
+#to-main-story{
+    background: linear-gradient(
+      rgba(51, 51, 51, 0.45), 
+      rgba(51, 51, 51, 0.45)
+    ), url("../../src/assets/img/fernald-and-medfield/11.jpg");
+    background-position: center;
+}
+
+.to-profile {
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.index-page-container {
+    display: grid;
+    grid-template-rows: 70vh 50vh auto;
+}
+
+#to-profiles-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1em;
+    justify-content: stretch;
+    width: 80%;
+}
+
+.to-profile {
+    width: 100%;
+}
+
+.to-profile h2 {
+    padding-left: .5em;
+}
+
+#profile1 {
+     background: linear-gradient(
+      rgba(51, 51, 51, 0.45), 
+      rgba(51, 51, 51, 0.45)
+    ), url("../../src/assets/img/fernald-and-medfield/11.jpg");
+    background-position: center;
+}
+
+#profile2 {
+     background: linear-gradient(
+      rgba(51, 51, 51, 0.45), 
+      rgba(51, 51, 51, 0.45)
+    ), url("../../src/assets/img/fernald-and-medfield/11.jpg");
+    background-position: center;
+}
+
+.h2-home {
+    color:$white;
+    margin: 0;
+}
+
+.photo-gallery-container {
+    margin: 5em 3em;
+}
+
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8;
+  cursor: pointer;
+  box-shadow: 1.5px 1.5px 8px black;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 22px;
+  font-family: $narrow-font;
+  padding: 0 .3em;
+  text-shadow: 2px 2px 8px black;
+}
+
+/* Closable button inside the image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+#expandedImg {
+    box-shadow: 1.5px 1.5px 8px black;
+}
+
+/*main story*/
 
 #grave-demo {
     position: -webkit-sticky; /* Safari */
@@ -210,41 +357,44 @@ section {
     position: relative;
 }
 
-.image-slides {
+.image-slides1, .image-slides2, .image-slides3 {
     display: none;
+    max-width: $content-width + 15em;
 }
 
 .cursor {
     cursor: pointer;
 }
 
-.image-slides img {
+img {
     width: 100%;
 }
 
 .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: $white;
-    fonr-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
+/* Position the "next button" to the right */
 .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #f1f1f1;
+  color: $black;
 }
 
 .numbertext {
@@ -270,6 +420,21 @@ iframe {
     margin: 3em 0;
 }
 
+#mass-bury-map {
+    width: 60%;
+}
+
+#juxtapose-container {
+    text-align: center;
+    height: fit-content;
+    width: fit-content;
+}
+
+iframe.juxtapose {
+    width: 80vw;
+    height: 60vh;
+}
+
 /* grave map */
 $p-color: #999999;
 $c-color: #998675;
@@ -278,8 +443,8 @@ $tooltip-background: rgba(255, 255, 255, 0.8);
 $black-font: rgb(20, 20, 20);
 
 #grave-map {
-    width: 100vw;
-    height: 70vh;
+    width: 100%;
+    height: 100%;
     position: relative
 }
 
@@ -288,6 +453,7 @@ $black-font: rgb(20, 20, 20);
 }
 
 .rectsLabels {
+    font-family: $title-font;
     font-size: .75em;
     fill: rgba(255,255,255,0.9);
 
@@ -310,11 +476,17 @@ $black-font: rgb(20, 20, 20);
 }
 
 
-@media only screen and (max-device-width: 500px) {
+@media only screen and (max-width: 500px) {
+
 
 /* grave map */   
 .rectsLabels {
     font-size: 0;
 
     }
+
+}
+
+@media only screen and (max-width: 700px) {
+
 }

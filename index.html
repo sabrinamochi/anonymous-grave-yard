@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,36 +6,102 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Project starter</title>
+    <title>Home</title>
     <link rel="stylesheet" type="text/css" href="dist/css/style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Alegreya:400,400i,700|Lato:300,300i,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=PT+Sans:ital,wght@0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script src="./src/lib/d3.js"></script>
 </head>
 
-<body>
-	<header class="index-page-header">
-		<h1>Title</h1>
-		<nav></nav>
-	</header>
+<body id="home">
+    <nav>
+            <ul class="navigator">
+                <li><a href="index.html">home</a></li>
+                <li><a href="main.html">story</a></li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">profiles</a>
+                    <div class="dropdown-content">
+                        <a href="profile-1.html">Profile1</a>
+                        <a href="profile-2.html">Profile2</a>
+                    </div>
+                </li>
+                <li><a href="about.html">about</a></li>    
+            </ul>
+    </nav>
+    <header>
+        <div class="cover-pic" id="main-story-cover-pic">
+          <div class="header-text-container">
+              <h1>Title: Official Final Story</h1>
+               <p class="subhead">subhead: a story that’s never been told before</p>
+               <p class="byline">Stories and Photos by Asia London Palomba </br> Design and Development by Szu Yu Chen</p>
+          </div>
+        </div>
+
+      </header>
 
     <main class="index-page-container">
-    	<section class="index-page-section" id="main-story" onclick="myhref('main.html')">
-    		<p>main story</p>
-    	</section>
-    	<section class="index-page-section profiles-container">
-    		<div class="profile">Profile One</div>
-    		<div class="profile">Profile Two</div>
-    	</section>
-    	<section class="index-page-section photo-gallery">Photo Gallery</section>
+        <section class="index-page-section">
+            <div id="to-main-story" onclick="myhref('main.html')">
+                <h2 class="h2-home">Main Story</h2>
+            </div>
+            
+        </section>
+        <section class="index-page-section">
+            <div id="to-profiles-container">
+              <div class="to-profile" id="profile1" onclick="myhref('profile-1.html')"><h2 class="h2-home">Profile One</h2></div>
+              <div class="to-profile" id="profile2" onclick="myhref('profile-2.html')"><h2 class="h2-home">Profile Two</h2></div>
+            </div>
+        </section>
+        <div class="index-page-section photo-gallery-container">
+                <!-- The grid: four columns -->
+                <div class="row">
+                  <div class="column">
+                    <img src="./src/assets/img/environment1.jpg" alt="first" onclick="photoGalleryFunction(this);">
+                  </div>
+                  <div class="column">
+                    <img src="./src/assets/img/environment2.jpg" alt="sec" onclick="photoGalleryFunction(this);">
+                  </div>
+                  <div class="column">
+                    <img src="./src/assets/img/environment1.jpg" alt="third" onclick="photoGalleryFunction(this);">
+                  </div>
+                  <div class="column">
+                    <img src="./src/assets/img/environment2.jpg" alt="fouth" onclick="photoGalleryFunction(this);">
+                  </div>
+                </div>
+
+                <!-- The expanding image container -->
+                <div class="container">
+                  <!-- Close the image -->
+                  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+                  <!-- Expanded image -->
+                  <img id="expandedImg" style="width:100%">
+
+                  <!-- Image text -->
+                  <div id="imgtext"></div>
+                </div>
+        </div>
     </main>
-
-
+    <footer>
+        
+    </footer>
     <script type="text/javascript">
-    	function myhref(url){
-      		window.location.href = url;
-      	}
-	</script>
+        function myhref(url){
+            window.location.href = url;
+        }
+        function photoGalleryFunction(imgs) {
+          // Get the expanded image
+          var expandImg = document.getElementById("expandedImg");
+          // Get the image text
+          var imgText = document.getElementById("imgtext");
+          // Use the same src in the expanded image as the image being clicked on from the grid
+          expandImg.src = imgs.src;
+          // Use the value of the alt attribute of the clickable image as text inside the expanded image
+          imgText.innerHTML = imgs.alt;
+          // Show the container element (hidden with CSS)
+          expandImg.parentElement.style.display = "block";
+        }
+    </script>
 
 </body>
 
 </html>
+

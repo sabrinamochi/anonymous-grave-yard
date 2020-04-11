@@ -29,14 +29,13 @@ var graveDemoBounds = graveDemoSvg.append("g")
 
 
 // Grave Map 
-var graveMapWidth = document.querySelector("#grave-map").clientWidth;
-var graveMapHeight = document.querySelector("#grave-map").clientHeight;
-
+var graveMapWidth = window.innerWidth;
+var graveMapHeight = window.innerHeight;
 var graveMapMargin = {
-    top: smallScreen ? 5 : 30,
+    top: smallScreen ? 5 : 80,
     right: smallScreen ? 25 : 60,
-    bottom: smallScreen ? 30 : 30,
-    left: smallScreen ? 0 : 10
+    bottom: smallScreen ? 30 : 80,
+    left: smallScreen ? 0 : 30
 }
 
 var graveMapXScale = d3.scaleLinear();
@@ -104,7 +103,7 @@ function drawGraveMap(data, boundsName) {
         var bounds = boundsName; 
         var rectgraveMapWidth = smallScreen ? 15 : 38;
         var rectgraveMapHeight =smallScreen ? 38 : 20;
-        var padding = smallScreen ? 3 : 8;
+        var padding = smallScreen ? 3 : 5;
 
         var rectsG = bounds.selectAll(".rectangleG")
             .data(data).enter()
@@ -170,8 +169,8 @@ function drawGraveMap(data, boundsName) {
 
         rectsG.selectAll("rect").on("mouseover", function (d) {
 
-            var x = graveMapXScale(graveMapXAccessor(d)) + rectgraveMapWidth + 50;
-            var y = graveMapYScale(graveMapYAccessor(d)) + rectgraveMapHeight / 2 + 10;
+            var x = graveMapXScale(graveMapXAccessor(d)) + rectgraveMapWidth + 20;
+            var y = graveMapYScale(graveMapYAccessor(d)) + rectgraveMapHeight / 2 + 5;
             
             tooltip.style("visibility", "visible")
                 .style("left", x + "px")
@@ -198,44 +197,6 @@ function drawGraveMap(data, boundsName) {
         });
 
         }
-
-        // // Draw background 
-        // var background = graveMapSvg.append("g")
-        //     .attr("class", "backround-lines");
-        
-        // var lineLeft = background
-        //     .append("line")
-        //     .attr("x1", graveMapMargin.left)
-        //     .attr("y1", graveMapMargin.top + boundedgraveMapHeight + 10)
-        //     .attr("x2", graveMapMargin.left)
-        //     .attr("y2", graveMapMargin.top)
-        //     .attr("stroke", "black");
-
-        // var lineTop = background
-        //     .append("line")
-        //     .attr("x1", graveMapMargin.left)
-        //     .attr("y1", graveMapMargin.top)
-        //     .attr("x2", graveMapMargin.left + boundedgraveMapWidth + 20)
-        //     .attr("y2", graveMapMargin.top)
-        //     .attr("stroke", "black");
-
-        // var lineBottom = background
-        //     .append("line")
-        //     .attr("x1", graveMapMargin.left)
-        //     .attr("y1", graveMapMargin.top + boundedgraveMapHeight + 10)
-        //     .attr("x2", graveMapMargin.left + boundedgraveMapWidth + 20)
-        //     .attr("y2", graveMapMargin.top + boundedgraveMapHeight + 10)
-        //     .attr("stroke", "black");
-
-
-        // var lineRight = background
-        //     .append("line")
-        //     .attr("x1", graveMapMargin.left + boundedgraveMapWidth + 20)
-        //     .attr("y1", graveMapMargin.top)
-        //     .attr("x2", graveMapMargin.left + boundedgraveMapWidth + 20)
-        //     .attr("y2", graveMapMargin.top + boundedgraveMapHeight + 10)
-        //     .attr("stroke", "black");
-
 
     };
 
@@ -305,7 +266,7 @@ function drawGraveMap(data, boundsName) {
                 .transition()
                 .ease(d3.easeLinear)
                 .duration(500)
-                .attr('viewBox', [graveDemoWidth-100, 50, graveDemoWidth, graveDemoHeight]);
+                .attr('viewBox', [graveDemoWidth, 50, graveDemoWidth, graveDemoHeight]);
 
             }
 
@@ -387,33 +348,36 @@ var currentElement= document.getElementById(elementID),
 
 }
 
-var slideIndex = 1;
-showSlides(slideIndex, "#tewksbury-image-container");
-showSlides(slideIndex, "#building-image-container");
-showSlides(slideIndex, "#fernandmet-image-container");
 
+var slideIndex = [1,1,1];
+var slideId = ["image-slides1", "image-slides2", "image-slides3"]
+showSlides(1, 0);
+showSlides(1, 1);
+showSlides(1, 2);
 
-function plusSlides(n){
-    showSlides(slideIndex +=n);
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
 }
 
-function showSlides(n, container){
-    var i;
-    $slides = $(container + " .image-slides");
-    $image = $(container + " .image-slides .image-img");
-    $captionText = $(container + " .caption");
-    if ( n > $slides.length){slideIndex = 1;}
-    if (n < 1) {slideIndex = $slides.length;}
-    for (i = 0; i < $slides.length; i++){
-        $slides[i].style.display = "none";
-    }
-
-    $slides[slideIndex-1].style.display = "block";
-    $captionText.innerHTML = $image[slideIndex-1].alt;
-
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
 }
 
+// calculate h2 position
 
+function calH2Position(){
+        var contentWidth = document.querySelector("section #content-first").clientWidth;
+        d3.selectAll("section .h2-container")
+        .style("width", `${contentWidth}px`);
+        console.log(contentWidth)
+}
 
-
+calH2Position()
 

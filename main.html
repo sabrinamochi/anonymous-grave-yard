@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Project starter</title>
+    <title>Main Story Title</title>
     <link rel="stylesheet" type="text/css" href="dist/css/style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Alegreya:400,400i,700|Lato:300,300i,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=PT+Sans:ital,wght@0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script src="./src/lib/d3.js"></script>
     <script src="./src/lib/jquery-3.4.1.min.js"></script>
     <script src="./src/lib/jquery.waypoints.min.js"></script>
@@ -17,33 +17,31 @@
 <body>
       <nav>
             <ul class="navigator">
-                <li><a href="#home">home</a></li>
+                <li><a href="index.html">home</a></li>
                 <li><a href="#story">story</a></li>
                 <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">profiles</a>
                     <div class="dropdown-content">
-                        <a href="#profile1">Profile1</a>
-                        <a href="#profile2">Profile2</a>
+                        <a href="profile-1.html">Profile1</a>
+                        <a href="profile-2.html">Profile2</a>
                     </div>
                 </li>
                 <li><a href="#about">about</a></li>    
             </ul>
       </nav>
       <header>
-          
-          <div class="cover-pic" id="main-story-cover-pic">
-            <div class="header-text-container">
+        <div class="cover-pic" id="main-story-cover-pic">
+          <div class="header-text-container">
               <h1>Title: Official Final Story</h1>
-              <p class="subhead">subhead: a story that’s never been told before</p>
-            </div>
+               <p class="subhead">subhead: a story that’s never been told before</p>
+               <p class="byline">Stories and Photos by Asia London Palomba </br> Design and Development by Szu Yu Chen</p>
           </div>
-          <div class="byline-container">
-              <p class="byline">Byline</p>
-          </div>
+        </div>
+
       </header>
 
       <main class="main-story-container">
         <section>
-            <p class="content">
+            <p class="content" id="content-first">
                 John Scott loved going to school. He spent Mondays through Fridays learning how to read, count money and tell time. But it was the creative subjects –– art and music –– that he enjoyed most. John didn’t attend a regular school. In fact, the school he attended didn’t even consider him to be a real student. He was an “inmate,” a “patient” of the Walter E. Fernald Developmental Center, the oldest state-run institution in the United States for people with intellectual and developmental disabilities. </br></br>
 
                 John spent his days, and most of his life, in a wheelchair in the institution located in Waltham. He was born with spina bifida, a birth defect that leads to an incomplete closing of the spine and spinal cord. He was paralyzed from the waist down, his legs were atrophied and he had a barrel chest. Born in 1956 in Boston to Eleanor Scott and James Warren Scott, John spent his entire life in the Fernald School. His parents dropped him off at the institution when he was a baby and never came back. </br></br>
@@ -83,22 +81,26 @@
             </p>
             <!-- image gallery -->
             <div id="tewksbury-image-container" class="image-slideshow-container"> 
-                <div class="image-slides">
-                    <div class="numbertext"> 1/3</div>
+                <div class="image-slides1">
+                    <div class="numbertext"> 1/4</div>
                     <img class="image-img" src="./src/assets/img/tewksbury/1.jpg" alt="caption1">
                 </div>
-                <div class="image-slides">
-                    <div class="numbertext"> 2/3</div>
+                <div class="image-slides1">
+                    <div class="numbertext"> 2/4</div>
                     <img class="image-img" src="./src/assets/img/tewksbury/2.jpg" alt="caption2">
                 </div>
-                <div class="image-slides">
-                    <div class="numbertext"> 3/3</div>
+                <div class="image-slides1">
+                    <div class="numbertext"> 3/4</div>
                     <img class="image-img" src="./src/assets/img/tewksbury/3.jpg" alt="caption3">
+                </div>
+                <div class="image-slides1">
+                    <div class="numbertext"> 4/4</div>
+                    <img class="image-img" src="./src/assets/img/tewksbury/4.jpg" alt="caption3">
                 </div>
 
                 <!--next and previous buttons-->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
 
                 <!--image text-->
                 <div class="caption-container">
@@ -115,9 +117,7 @@
                 “You could be looking at easily over 100,000 [people buried] in institutional lots [in Massachusetts] that are just marked by a number, or not even marked at all,” says Rickord.
                 </br></br>
             </p>
-            <iframe title="Institutions in Massachusetts which buried their patients in unmarked graves" aria-label="USA massachusetts zip codes Symbol map" id="datawrapper-chart-bJiZK" src="//datawrapper.dwcdn.net/bJiZK/1/" scrolling="no" frameborder="0">
-                
-            </iframe>
+            <iframe id="mass-bury-map" title="Institutions in Massachusetts which buried their patients in unmarked graves" aria-label="USA massachusetts zip codes Symbol map" id="datawrapper-chart-bJiZK" src="//datawrapper.dwcdn.net/bJiZK/1/" scrolling="no" frameborder="0" style="border: none;" ></iframe>
             <script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();
             </script> 
         </section>
@@ -133,7 +133,9 @@
             </p>
         </section>
         <section>
-            <h2>The first American institution</h2>
+            <div class="h2-container">
+                <h2>The first American institution</h2>
+            </div>
             <p class="content">
                 It’s a brisk October afternoon in Waltham. Up ahead, on a hill in the woods where thousands of dry leaves cloak the ground, is an old brick building surrounded by metal fencing. Its windows are broken, its massive wooden door hangs off the hinges and dozens of vines snake their way up its weathered exterior. </br></br>
 
@@ -142,22 +144,22 @@
 
                 <!-- image gallery -->
             <div id="building-image-container" class="image-slideshow-container"> 
-                <div class="image-slides">
+                <div class="image-slides2">
                     <div class="numbertext"> 1/3</div>
                     <img class="image-img" src="./src/assets/img/tewksbury/1.jpg" alt="caption1">
                 </div>
-                <div class="image-slides">
+                <div class="image-slides2">
                     <div class="numbertext"> 2/3</div>
                     <img class="image-img" src="./src/assets/img/tewksbury/2.jpg" alt="caption2">
                 </div>
-                <div class="image-slides">
+                <div class="image-slides2">
                     <div class="numbertext"> 3/3</div>
                     <img class="image-img" src="./src/assets/img/tewksbury/3.jpg" alt="caption3">
                 </div>
 
                 <!--next and previous buttons-->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
 
                 <!--image text-->
                 <div class="caption-container">
@@ -179,22 +181,54 @@
             </p>
                <!-- image gallery -->
             <div id="fernandmet-image-container" class="image-slideshow-container"> 
-                <div class="image-slides">
+                <div class="image-slides3">
                     <div class="numbertext"> 1/3</div>
-                    <img class="image-img" src="./src/assets/img/tewksbury/1.jpg" alt="caption1">
+                    <img class="image-img" src="./src/assets/img/fernald-and-medfield/1.jpg" alt="caption1">
                 </div>
-                <div class="image-slides">
+                <div class="image-slides3">
                     <div class="numbertext"> 2/3</div>
-                    <img class="image-img" src="./src/assets/img/tewksbury/2.jpg" alt="caption2">
+                    <img class="image-img" src="./src/assets/img/fernald-and-medfield/2.jpg" alt="caption2">
                 </div>
-                <div class="image-slides">
+                <div class="image-slides3">
                     <div class="numbertext"> 3/3</div>
-                    <img class="image-img" src="./src/assets/img/tewksbury/3.jpg" alt="caption3">
+                    <img class="image-img" src="./src/assets/img/fernald-and-medfield/3.jpg" alt="caption3">
+                </div>
+                <div class="image-slides3">
+                    <div class="numbertext"> 3/3</div>
+                    <img class="image-img" src="./src/assets/img/fernald-and-medfield/4.jpg" alt="caption3">
+                </div>
+                <div class="image-slides3">
+                    <div class="numbertext"> 3/3</div>
+                    <img class="image-img" src="./src/assets/img/fernald-and-medfield/5.jpg" alt="caption3">
+                </div>
+                <div class="image-slides3">
+                    <div class="numbertext"> 3/3</div>
+                    <img class="image-img" src="./src/assets/img/fernald-and-medfield/6.jpg" alt="caption3">
+                </div>
+                <div class="image-slides3">
+                    <div class="numbertext"> 3/3</div>
+                    <img class="image-img" src="./src/assets/img/fernald-and-medfield/7.jpg" alt="caption3">
+                </div>
+                <div class="image-slides3">
+                    <div class="numbertext"> 3/3</div>
+                    <img class="image-img" src="./src/assets/img/fernald-and-medfield/8.jpg" alt="caption3">
+                </div>
+                <div class="image-slides3">
+                    <div class="numbertext"> 3/3</div>
+                    <img class="image-img" src="./src/assets/img/fernald-and-medfield/9.jpg" alt="caption3">
+                </div>
+                <div class="image-slides3">
+                    <div class="numbertext"> 3/3</div>
+                    <img class="image-img" src="./src/assets/img/fernald-and-medfield/10.jpg" alt="caption3">
+                </div>
+                <div class="image-slides3">
+                    <div class="numbertext"> 3/3</div>
+                    <img class="image-img" src="./src/assets/img/fernald-and-medfield/11.jpg" alt="caption3">
                 </div>
 
                 <!--next and previous buttons-->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
 
                 <!--image text-->
                 <div class="caption-container">
@@ -215,8 +249,9 @@
 
             </p>
         </section>
-        <section>
-            <h2>Deteriorating conditions</h2>
+        <section class="section-with-iframe">
+            <div class="h2-container"><h2>Deteriorating conditions</h2>
+            </div>
             <p class="content">
                 As numbers at the Fernald School began to swell into the 20th century, a demand for caregivers intensified, resulting in an increasing number of patients who were neglected. The onset of World War I and then World War II exacerbated conditions when staff members were called away to aid in the war effort. As a result, these institutions hired staff who had little to no experience caring for people with disabilities.  </br></br>
 
@@ -225,11 +260,59 @@
                 These boys were part of the Fernald School’s “science club” and were incentivized with special field trips off campus and gifts such as Red Sox tickets. Clemens E. Benda, Fernald’s clinical director at the time, sent parents a letter in May 1953 explaining the study but never mentioned the radioactive isotopes. Rather, he said they were trying to “improve the nutrition of our children.” He continued: “I hope that you have no objection that your son is voluntarily participating in this study… if you have not expressed any objections, we will assume that your son may participate.”</br></br>
 
             </p>
-        </section>
-        <div class="chart-container">
+            <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1AxOf5Ubs96p-JDI3SB5en8xPdEI1Lrp36dBSYJyoB1g&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+             <p class="content">
+                Human experimentation was just one of the horrors researchers have since discovered. Many of the patients were neglected by staff which led to unfortunate and premature deaths. “It was really bad in there. There are people buried in the cemetery who were scalded to death in hot showers, or who choked to death on food. These are not things that are acceptable, this is horrifying,” says Green, who gleaned this information through death certificates discovered during research. </br></br>
+
+               By 1947, Fernald and MetState had begun to bury their dead on a plot of land in the middle of the woods which lies squarely between the two institutions. (Prior to that, unclaimed bodies were buried in unmarked graves in Waltham’s Mount Feake Cemetery on Prospect Street.) Dividing the cemetery into a Catholic and Protestant section, the patients were buried in basic pine caskets lined with gray cloth, marked only by a nameless slab of cinder and concrete. The institutions usually did a haphazard job of contacting family members about deaths. In certain cases families made effort to collect or visit the body, says Green. </br></br>
+
+            </p>
+            <div class="chart-container">
             <div id="grave-map"></div>
-        </div>
+            </div>
+            <p class="content">
+             While there is no concrete reason for why patients were buried without names, birth and death dates, Green suggests the anonymity may have been a measure to protect a family’s reputation. Worse, having a child with a disability was often a source of shame for families, and many times they were encouraged by family doctors to lie and tell others their child was dead, says Nielsen. Prior to 1947, Green believes patients may have been buried around the institutions’ campuses without so much as a stone to denote their presence.  </br></br>
+
+             “MetFern is marked, but unnamed. It seems like this was a common practice in Massachusetts. There are others [buried] in graves which aren’t marked. In some ways, MetFern is even a step up for the burial that some people may have had,” says Rosenblatt.  </br></br>
+
+            </p>
+        </section>
+        <section>
+            <div class="h2-container"><h2>A step toward dignity </h2>
+            </div>
+            <p class="content">
+                It was a damp, muddy day in 1971 when Wayne Brasco, a young funeral director, was driving out to MetFern to bury his first body for MetState. His family’s funeral home, Brasco and Son, located in Waltham, had struck up a contract with Fernald and MetState to bury their dead. When he got there, Brasco noticed the 6-foot-deep grave was filled with five feet of water. When he asked the groundskeepers what to do, they told him to sink the casket with rocks.</br></br> 
+                Brasco refused. </br></br>
+                “I took a bold move and drove away with the body in the hearse. I said, ‘If you call me back and there’s any water in that grave, I’ll call the newspapers,” says Brasco, now 72, from his office where he has worked since the 1960s. The grave was pumped and he returned to bury the body, for which he was paid about $130. It was a small step in what was to become a movement headed by Brasco and a priest named Father Henry Marquadt to offer more dignified burials for the institutions’ patients.</br></br>
+                In 1973, Father Marquadt started the Death and Dying Committee at Fernald to help family members pay for better burials at MetFern or for a grave to be arranged in a family cemetery or local cemetery such as Mount Feake, .is a short drive from the Fernald School.In the 1970s, a grave cost about $300 and a grave liner –– an outer burial container usually made from concrete the casket is placed in –– was another $150. Father Marquadt passed away in 1991 and Brasco served on the Death and Dying Committee until 1992.</br></br>
+                “I saw him write checks out of his checking account to buy graves...He humanized it, he made it real,” says Brasco. “We helped a lot of souls. We prevented a lot of burials [at MetFern]...MetFern was like a dirty memory.” </br></br>
+                This initiative, compounded by a national disability rights movement, which gained traction in the late 1970s and early '80s, demanded an improvement of conditions for patients. While some certainly benefited from this, others continued not to. If a patient was fortunate enough to have a loving and dedicated caregiver, then their time within the institution was beneficial, even happy. </br></br>
+                Weiner remembers there were some nurturing staff there, people who took the kids home on holidays, or donated nice clothes for the deceased to wear in their caskets. </br></br>
+                But she recalls that even with attempts at reform, there remained grimmer realities for others, things that still haunt her, such as rumors of staff physically abusing patients including a young man named Billy. And, some of her own patients, including John, were visibly neglected and rarely kept clean. These instances of abuse were common in institutions, say experts. </br></br>
+                “When institutions were created, in many ways there were good intentions,” says Neilsen. “It hardly took a few decades before they were overcrowded and incredibly underfunded. I think in those situations it’s easy for staff to abuse folks and for staff to become frazzled. The lack of supervision, and families being encouraged to stay away and...tell [people] their kid died, it’s almost creating the ideal space for abuse.” </br></br>
+            </p>
+        </section>
+        <section>
+            <div class="h2-container"><h2>Gone but not forgotten</h2>
+            </div>
+            <p class="content">
+               Although there is increasing awareness surrounding the histories of institutions such as Fernald and MetState, MetFern still remains largely unknown. There are only two signs informing passersby of who is buried there. Most of the headstones have sunken into the ground and their etchings have been eroded by years of weather and no maintenance.</br></br> 
+                Green and Kadden are currently working with Gann students to create more markers for the cemetery and reset the headstones to make the place more dignified. The students have also created a Yizkor book, a book of remembrance, filled with research on the institutions and information on the lives of those buried at MetFern. Some students have continued to work on biographies outside of class and even those who have graduated from Gann Academy continue to follow up. </br></br>
+                “Even though after graduating, I’m far away and can’t be as invested, I still really care. Respect for the deceased is a very important value to me,” says Hodaya Propp, 20, a former student at Gann Academy. Propp, who now studies applied and engineering physics at Cornell University, was responsible for creating the cemetery’s <a href="http://metferncemetery.org">official website</a> for her high school senior project. She remembers stumbling across MetFern for the first time with a sense of shock. “It just seemed forlorn. There was nothing there.”</br></br>
+                The grounds of the Metropolitan State Hospital were torn down after its closure in the ‘90s and luxury apartments now stand in its place. Although the Fernald campus is still intact and belongs to the City of Waltham, advocates are pushing for some of the old buildings to be repurposed into spaces for the city’s disabled. There’s also a desire to turn the campus into the country’s first disability museum. The significance of it being housed in the country’s oldest state-run institution for the disabled cannot be understated. </br></br>
+                
+            </p>
+             <div id="juxtapose-container"><iframe frameborder="0" class="juxtapose" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=16b3d414-365d-11ea-b9b8-0edaf8f81e27"></iframe></div>
+             <p class="content">
+                Green and his students are also advocating for better access to patients’ medical records, most of which are locked up under state privacy privileges, raising questions about how long privacy should be protected versus the need to tell the stories and histories of these institutions. On Oct. 31, 2019, Green and a student testified on Beacon Hill before a legislative committee in <i>support of a bill</i> that would unlock the records of people with disabilities who died in institutions. </br></br>
+                Their advocacy work has not gone unnoticed. “I think it’s great that these people will not be forgotten, that they’re memorialized in the work the students have done,” says Weiner. “They were real people. I certainly think that there’s historical value to all this and lessons for the future.” 
+             </p>
+        </section>
+        
     </main>
+    <footer>
+    </footer>
+
     <script src="./src/js/main-story-script.js"></script>
 
 </body>
